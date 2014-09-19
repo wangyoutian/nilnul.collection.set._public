@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92BA075B-F911-4654-AE1B-BF90B77F5DDA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nilnul.collection.set</RootNamespace>
+    <AssemblyName>nilnul.collection.set</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cardinal.cs" />
+    <Compile Include="ClassOfSets.cs" />
+    <Compile Include="EmptySet%28T.cs" />
+    <Compile Include="Literal.cs" />
+    <Compile Include="EmptySet.cs" />
+    <Compile Include="InductiveI.cs" />
+    <Compile Include="InfinityI.cs" />
+    <Compile Include="Recursive.cs" />
+    <Compile Include="rel\Empty.cs" />
+    <Compile Include="rel\EmptyAssert.cs" />
+    <Compile Include="rel\EmptyX.cs" />
+    <Compile Include="SetByPredicate%28T.cs" />
+    <Compile Include="SetI.cs" />
+    <Compile Include="TostrX.cs" />
+    <Compile Include="Combinate.cs" />
+    <Compile Include="EqualsX.cs" />
+    <Compile Include="EqualityComparer.cs" />
+    <Compile Include="FiniteSet.cs" />
+    <Compile Include="IsHashSet.cs" />
+    <Compile Include="op\BinaryI.cs" />
+    <Compile Include="op\Diff.cs" />
+    <Compile Include="op\expr\Binary.cs" />
+    <Compile Include="op\expr\BinaryI.cs" />
+    <Compile Include="op\expr\Union%28T.cs" />
+    <Compile Include="op\Intersect.cs" />
+    <Compile Include="op\SuccessorX.cs" />
+    <Compile Include="op\Union.cs" />
+    <Compile Include="op\Xor.cs" />
+    <Compile Include="PowerSetX.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Set%28T.cs" />
+    <Compile Include="Set.cs" />
+    <Compile Include="SetI%28T.cs" />
+    <Compile Include="SigmaAlgebra %2821%29.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\nilnul.bit1\nilnul.bit1.csproj">
+      <Project>{44b8389a-b3da-412d-8886-2cd9e70d6412}</Project>
+      <Name>nilnul.bit1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\nilnul.collection\nilnul.collection.csproj">
+      <Project>{1b4258b0-7d81-4434-9a77-5dc075d83143}</Project>
+      <Name>nilnul.collection</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

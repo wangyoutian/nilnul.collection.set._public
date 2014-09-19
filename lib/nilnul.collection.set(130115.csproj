@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69073122-152B-4EE0-8FDD-341566D20560}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nilnul.collection.set</RootNamespace>
+    <AssemblyName>nilnul.collection.set%28130115</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adjectives\Singleton.cs" />
+    <Compile Include="adjectives\decorated\EmptySet%28T.cs" />
+    <Compile Include="adjectives\decorated\EmptySet.cs" />
+    <Compile Include="adjectives\Finite.cs" />
+    <Compile Include="adjectives\decorated\FiniteSet.cs" />
+    <Compile Include="Cardinal.cs" />
+    <Compile Include="ClassOfSets.cs" />
+    <Compile Include="Combinate.cs" />
+    <Compile Include="EqualityComparer.cs" />
+    <Compile Include="EqualsX.cs" />
+    <Compile Include="InductiveI.cs" />
+    <Compile Include="InfinityI.cs" />
+    <Compile Include="IsHashSet.cs" />
+    <Compile Include="Literal.cs" />
+    <Compile Include="op\BinaryI.cs" />
+    <Compile Include="op\Diff.cs" />
+    <Compile Include="op\expr\Binary.cs" />
+    <Compile Include="op\expr\BinaryI.cs" />
+    <Compile Include="op\expr\Union%28T.cs" />
+    <Compile Include="op\Intersect.cs" />
+    <Compile Include="op\SuccessorX.cs" />
+    <Compile Include="op\Union.cs" />
+    <Compile Include="op\Xor.cs" />
+    <Compile Include="PowerSetX.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="adjectives\decorated\SingletonSet.cs" />
+    <Compile Include="Recursive.cs" />
+    <Compile Include="adjectives\Empty.cs" />
+    <Compile Include="adjectives\EmptyAssert.cs" />
+    <Compile Include="adjectives\EmptyX.cs" />
+    <Compile Include="Set%28T.cs" />
+    <Compile Include="Set.cs" />
+    <Compile Include="SetByPredicate%28T.cs" />
+    <Compile Include="SetI%28T.cs" />
+    <Compile Include="SetI.cs" />
+    <Compile Include="SigmaAlgebra %2821%29.cs" />
+    <Compile Include="TostrX.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\nilnul%28130115\nilnul%28130115.csproj">
+      <Project>{df088fd6-2abc-4de2-972d-1109150a99cc}</Project>
+      <Name>nilnul%28130115</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\nilnul.bit\nilnul.bit.csproj">
+      <Project>{95b503d2-1275-43d3-ab8d-61fd3364d67c}</Project>
+      <Name>nilnul.bit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\nilnul.collection%28130115\nilnul.collection%28130115.csproj">
+      <Project>{c98d4bf7-d6cf-4512-9d43-d310b9e09e8d}</Project>
+      <Name>nilnul.collection%28130115</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="rel\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
